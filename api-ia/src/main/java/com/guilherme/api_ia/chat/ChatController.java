@@ -25,6 +25,6 @@ public class ChatController {
                 .user(message.message())
                 .call()
                 .content();
-        return new ChatMessage(response);
+        return new ChatMessage(response, rs.getString("type"));
     }
 }
